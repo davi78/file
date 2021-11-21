@@ -6,7 +6,7 @@
     "file",
     "sharing"
   ],
-  "repository": "https://github.com/davi78/file",
+  "repository": "https://github.com/CodeXBotz/File-Sharing-Bot",
   "logo": "https://telegra.ph/file/14d3013fda21281c54b61.jpg",
   "env": {
     "TG_BOT_TOKEN": {
@@ -24,6 +24,10 @@
     "API_HASH":{
       "description": "Masukkan API_HASH, Dapatkan dari my.telegram.org",
       "value": "9503a484770cc99a68296e2834029be6"
+    },
+    "USERNAME":{
+      "description": "Masukkan username telegram tanpa @ contoh iniusername",
+      "value": "davialfajr"
     },
     "CHANNEL_ID":{
       "description": "Ini adalah (database channel), Tambahkan bot di channel database lalu jadikan admin, dan masukkan ID channel",
