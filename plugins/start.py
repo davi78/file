@@ -6,7 +6,7 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, 
 from pyrogram.errors import FloodWait, UserIsBlocked, InputUserDeactivated
 
 from bot import Bot
-from config import ADMINS, FORCE_MSG, START_MSG, OWNER_ID, CUSTOM_CAPTION, DISABLE_CHANNEL_BUTTON
+from config import ADMINS, FORCE_MSG, START_MSG, OWNER_ID, CUSTOM_CAPTION, DISABLE_CHANNEL_BUTTON, USERNAME
 from helper_func import subscribed, encode, decode, get_messages
 from database.support import users_info
 from database.sql import add_user, query_msg
@@ -93,9 +93,18 @@ async def start_command(client: Client, message: Message):
     else:
         reply_markup = InlineKeyboardMarkup(
             [
+                [InlineKeyboardButton("🥷 ᴘᴇᴍɪʟɪᴋ", url = f"t.me/{USERNAME}'")],
                 [
-                    InlineKeyboardButton("Chat Sex 🔞", url = "t.me/chatsangek_bot"),
-                    InlineKeyboardButton("🔒 Close", callback_data = "close")
+                    InlineKeyboardButton("🥷 ᴛᴇɴᴛᴀɴɢ sᴀʏᴀ", callback_data = "about"),
+                    InlineKeyboardButton("🔒 ᴛᴜᴛᴜᴘ", callback_data = "close")
+                ],
+                [
+                    InlineKeyboardButton("🆔 ᴄʜᴀɴɴᴇʟ 1",url = client.invitelink),
+                    InlineKeyboardButton("🆔 ᴄʜᴀɴɴᴇʟ 2",url = client.invitelink2)
+                ],
+                [
+                    InlineKeyboardButton("🆔 ᴄʜᴀɴɴᴇʟ 3",url = client.invitelink3),
+                    InlineKeyboardButton("🆔 ᴄʜᴀɴɴᴇʟ 4",url = client.invitelink4)
                 ]
             ]
         )
@@ -116,6 +125,7 @@ async def start_command(client: Client, message: Message):
 @Bot.on_message(filters.command('start') & filters.private)
 async def not_joined(client: Client, message: Message):
     buttons = [
+        [InlineKeyboardButton("🥷 ᴘᴇᴍɪʟɪᴋ", url = f"t.me/{USERNAME}'")],
         [
             InlineKeyboardButton("🆔 ᴄʜᴀɴɴᴇʟ 1",url = client.invitelink),
             InlineKeyboardButton("🆔 ᴄʜᴀɴɴᴇʟ 2",url = client.invitelink2)
