@@ -93,7 +93,7 @@ async def start_command(client: Client, message: Message):
     else:
         reply_markup = InlineKeyboardMarkup(
             [
-                [InlineKeyboardButton("🥷 ᴘᴇᴍɪʟɪᴋ", url = f"https://t.me/{USERNAME}'")],
+                [InlineKeyboardButton("🥷 ᴘᴇᴍɪʟɪᴋ", url = f"https://t.me/{USERNAME}")],
                 [
                     InlineKeyboardButton("🥷 ᴛᴇɴᴛᴀɴɢ sᴀʏᴀ", callback_data = "about"),
                     InlineKeyboardButton("🔒 ᴛᴜᴛᴜᴘ", callback_data = "close")
@@ -125,7 +125,7 @@ async def start_command(client: Client, message: Message):
 @Bot.on_message(filters.command('start') & filters.private)
 async def not_joined(client: Client, message: Message):
     buttons = [
-        [InlineKeyboardButton("🥷 ᴘᴇᴍɪʟɪᴋ", url = f"https://t.me/{USERNAME}'")],
+        [InlineKeyboardButton("🥷 ᴘᴇᴍɪʟɪᴋ", url = f"https://t.me/{USERNAME}")],
         [
             InlineKeyboardButton("🆔 ᴄʜᴀɴɴᴇʟ 1",url = client.invitelink),
             InlineKeyboardButton("🆔 ᴄʜᴀɴɴᴇʟ 2",url = client.invitelink2)
